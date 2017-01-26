@@ -1,0 +1,7 @@
+<h1>Donor Kebab</h1>
+
+<div *ngFor="let project of projects | async" (click)="goToDetailPage(project)">
+<div>
+  <h3><em>{{project.title}}</em> by {{project.creator}}</h3>
+</div>
+</div>
