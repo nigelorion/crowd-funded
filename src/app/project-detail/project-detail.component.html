@@ -1,9 +1,18 @@
 <div class="projectDetail">
 
-  <h1>{{(projectDisplay | async)?.title}}</h1>
-  <h3>{{(projectDisplay | async)?.creator}}</h3>
-  <h3>{{(projectDisplay | async)?.backers}}</h3>
-  <h3>{{(projectDisplay | async)?.pledged}}</h3>
-  <h3>{{(projectDisplay | async)?.days}}</h3>
+  <h1>{{projectDisplay?.title}}</h1>
+  <h3>{{projectDisplay?.creator}}</h3>
+  <h3>{{projectDisplay?.backers}}</h3>
+  <h3>{{projectDisplay?.pledged}}</h3>
+  <h3>{{projectDisplay?.days}}</h3>
 
+</div>
+
+<div class="form">
+    <button (click)="newDonate()">Donate Now!</button>
+</div>
+
+<div *ngIf="donateForm">
+  <input type="number" #donation >
+  <button (click)="submitDonation(projectDisplay, donation.value)">Submit</button>
 </div>

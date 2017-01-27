@@ -12,6 +12,6 @@ const appRoutes: Routes = [
     path: 'projects/:id',
     component: ProjectDetailComponent
   }
-];
+]; 
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
